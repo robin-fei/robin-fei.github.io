@@ -4,10 +4,7 @@ title: 引用
 permalink: /donate/
 ---
 
-
-
-
-## Life
+### Life
 
 * You don’t need to be constantly reminding yourself why you shouldn’t wait. Just don’t wait. —— Paul Graham, [Life is Short](http://paulgraham.com/vb.html)
 

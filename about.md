@@ -4,7 +4,7 @@ title: 关于
 permalink: /about/
 ---
 
-
+## 关于作者
 
 ### 专长:
 
@@ -22,7 +22,7 @@ permalink: /about/
 
 ### 联系我:
 
-* blog:[zhiyuan.github.io](http://zhiyuan.github.io)
+* blog:[robin-fei.github.io](https://robin-fei.github.io)
 * gmail: [feihaming@gmail.com](mailto:feihaming@gmail.com)
 * oschina: [robinfei](https://my.oschina.net/robinfei)
 
