@@ -1,93 +1,46 @@
-# jekyll-bootstrap-blog
+# Jekyll-Bootstrap
 
-A theme for Jekyll to build a personal blog, based on [Bootstrap 3](http://getbootstrap.com/), [Font Awesome](http://fortawesome.github.io/Font-Awesome/) and [jQuery](http://jquery.com/).  
-
-* Clean
-* Responsive
-* Mobile First
-* Syntax Highlighting 
-* Jekyll 3 Supported
-* SEO Friendly
-
-## Screenshots
-
-![](img/20161203-screenshots-01.png)
-
-![](img/20161203-screenshots-02.png)
-
-## Demo
-
-You can see the theme running on [my blog](https://waylau.com/).
-
-<!-- more -->
+The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
 
 ## Usage
 
-### Installation
+For all usage and documentation please see: <http://jekyllbootstrap.com>
 
-- Start by cloning the github repo using `git clone`
-- You must have jekyll installed to run this, use `gem install jekyll` for installing it
-- Use `jekyll serve` to run the site live.
+## Version
 
-### Configration
+0.3.0 - stable and versioned using [semantic versioning](http://semver.org/).
 
-```
-# Site settings
-title: Way Lau's Personal Site
-name: Way Lau's Personal Site
-url: "http://www.waylau.com"
-email: waylau521@gmail.com
-description: Way Lau's Personal Site | www.waylau.com.
-baseurl: "" # the subpath of your site, e.g. /blog/
-twitter_username: waylau521
-github_username:  waylau
-weibo_username: waylau521
-facebook_username: waylau521
-duoshuo_username: waylau
-baidushare_id: 89860593
-baidutongji_id: 28cf5fa48a599e39c5cc760931de942f
-rss_url: "/feed.xml"
-logo_image: "/images/logo.png"
-# Build settings
-gems: [jekyll-paginate]
-markdown: rdiscount
-highlighter: pygments
-permalink: /:title/
-paginate: 8
-paginate_path: page/:num
-```
+**NOTE:** 0.3.0 introduces a new theme which is not backwards compatible in the sense it won't _look_ like the old version.
+However, the actual API has not changed at all.
+You might want to run 0.3.0 in a branch to make sure you are ok with the theme design changes.
 
-### Creating Posts
+## Contributing 
 
-For creating posts add this snippet in front of your post's markdown file:
+This repository tracks 2 projects:
 
-```
----
-layout: post
-title:  "your title here"
-tags: your tags here
-class: post
----
-```
+- **Jekyll-Bootstrap Framework.**  
+  The framework for which users should clone and build their blog on top of is available in the master branch.
+  
+  To contribute to the framework please make sure to checkout your branch based on `jb-development`!!
+  This is very important as it allows me to accept your pull request without having to publish a public version release.
+  
+  Small, atomic Features, bugs, etc.   
+  Use the `jb-development` branch but note it will likely change fast as pull requests are accepted.   
+  Please rebase as often as possible when working.   
+  Work on small, atomic features/bugs to avoid upstream commits affecting/breaking your development work.
+  
+  For Big Features or major API extensions/edits:   
+  This is the one case where I'll accept pull-requests based off the master branch.
+  This allows you to work in isolation but it means I'll have to manually merge your work into the next public release.
+  Translation : it might take a bit longer so please be patient! (but sincerely thank you).
+ 
+- **Jekyll-Bootstrap Documentation Website.**    
+  The documentation website at <http://jekyllbootstrap.com> is maintained in the gh-pages branch.
+  Please fork and contribute documentation additions to this branch only.
 
-Add content below this and save the post in `_posts` directory (you will have to create it).
+The master and gh-pages branch do not share the same ancestry. Please treat them as completely separate git repositories!
 
-### Page excluded from top bar nav
-
-By default, created pages will show on the top bar nav. If you want page excluded from top bar nav, you just add`excludedFromNav: true` in the page as below: 
-
-```
----
-layout: page
-title: Labs
-permalink: /labs/
-excludedFromNav:true
----
-```
 
 ## License
 
-Feel free to fork and contribute to the project, just create a pull request.
-
-Open sourced under [MIT License](LICENSE) 
-
+[MIT](http://opensource.org/licenses/MIT)
