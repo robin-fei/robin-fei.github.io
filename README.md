@@ -1,78 +1,93 @@
-# Jekyll-Bootstrap
+# jekyll-bootstrap-blog
 
-The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
+A theme for Jekyll to build a personal blog, based on [Bootstrap 3](http://getbootstrap.com/), [Font Awesome](http://fortawesome.github.io/Font-Awesome/) and [jQuery](http://jquery.com/).  
+
+* Clean
+* Responsive
+* Mobile First
+* Syntax Highlighting 
+* Jekyll 3 Supported
+* SEO Friendly
+
+## Screenshots
+
+![](img/20161203-screenshots-01.png)
+
+![](img/20161203-screenshots-02.png)
+
+## Demo
+
+You can see the theme running on [my blog](https://waylau.com/).
+
+<!-- more -->
 
 ## Usage
 
-For all usage and documentation please see: <http://jekyllbootstrap.com>
+### Installation
 
-## Version
+- Start by cloning the github repo using `git clone`
+- You must have jekyll installed to run this, use `gem install jekyll` for installing it
+- Use `jekyll serve` to run the site live.
 
-0.3.0 - stable and versioned using [semantic versioning](http://semver.org/).
+### Configration
 
-**NOTE:** 0.3.0 introduces a new theme which is not backwards compatible in the sense it won't _look_ like the old version.
-However, the actual API has not changed at all.
-You might want to run 0.3.0 in a branch to make sure you are ok with the theme design changes.
+```
+# Site settings
+title: Way Lau's Personal Site
+name: Way Lau's Personal Site
+url: "http://www.waylau.com"
+email: waylau521@gmail.com
+description: Way Lau's Personal Site | www.waylau.com.
+baseurl: "" # the subpath of your site, e.g. /blog/
+twitter_username: waylau521
+github_username:  waylau
+weibo_username: waylau521
+facebook_username: waylau521
+duoshuo_username: waylau
+baidushare_id: 89860593
+baidutongji_id: 28cf5fa48a599e39c5cc760931de942f
+rss_url: "/feed.xml"
+logo_image: "/images/logo.png"
+# Build settings
+gems: [jekyll-paginate]
+markdown: rdiscount
+highlighter: pygments
+permalink: /:title/
+paginate: 8
+paginate_path: page/:num
+```
 
-## Milestones
+### Creating Posts
 
-[0.4.0](https://github.com/plusjade/jekyll-bootstrap/milestones/v%200.4.0) - next release [ETA 03/29/2015]
+For creating posts add this snippet in front of your post's markdown file:
 
-### GOALS
+```
+---
+layout: post
+title:  "your title here"
+tags: your tags here
+class: post
+---
+```
 
-* No open PRs against master branch.
-* Squash some bugs.
-* Add some new features (low-hanging fruit).
-* Establish social media presence.
+Add content below this and save the post in `_posts` directory (you will have to create it).
 
+### Page excluded from top bar nav
 
-### Bugs
+By default, created pages will show on the top bar nav. If you want page excluded from top bar nav, you just add`excludedFromNav: true` in the page as below: 
 
-|Bug |Description
-|------|---------------
-|[#86](https://github.com/plusjade/jekyll-bootstrap/issues/86)  |&#x2611; Facebook Comments
-|[#113](https://github.com/plusjade/jekyll-bootstrap/issues/113)|&#x2611; ASSET_PATH w/ page & post
-|[#144](https://github.com/plusjade/jekyll-bootstrap/issues/144)|&#x2610; BASE_PATH w/ FQDN
-|[#227](https://github.com/plusjade/jekyll-bootstrap/issues/227)|&#x2611; Redundant JB/setup
-
-### Features
-
-|Bug |Description
-|------|---------------
-|[#98](https://github.com/plusjade/jekyll-bootstrap/issues/98)  |&#x2611; GIST Integration
-|[#244](https://github.com/plusjade/jekyll-bootstrap/issues/244)|&#x2611; JB/file_exists Helper
-|[#42](https://github.com/plusjade/jekyll-bootstrap/issues/42)  |&#x2611; Sort collections of Pages / Posts
-|[#84](https://github.com/plusjade/jekyll-bootstrap/issues/84)  |&#x2610; Detecting production mode
-
-### TODOS
-
-Review existing pull requests against plusjake/jekyll-bootstrap:master. Merge or close each.
-
-* Create twitter account. Add link / icon on jekyllbootstrap.com.
-* Create blog posts under plusjade/gh-pages, expose on jekyllbootstrap.com, feed to twitter account.
-* Announce state of project, announce roadmap(s), announce new versions as they’re released.
-
-## Contributing
-
-
-To contribute to the framework please make sure to checkout your branch based on `jb-development`!!
-This is very important as it allows me to accept your pull request without having to publish a public version release.
-
-Small, atomic Features, bugs, etc.
-Use the `jb-development` branch but note it will likely change fast as pull requests are accepted.
-Please rebase as often as possible when working.
-Work on small, atomic features/bugs to avoid upstream commits affecting/breaking your development work.
-
-For Big Features or major API extensions/edits:
-This is the one case where I'll accept pull-requests based off the master branch.
-This allows you to work in isolation but it means I'll have to manually merge your work into the next public release.
-Translation : it might take a bit longer so please be patient! (but sincerely thank you).
-
-**Jekyll-Bootstrap Documentation Website.**
-
-The documentation website at <http://jekyllbootstrap.com> is maintained at https://github.com/plusjade/jekyllbootstrap.com
-
+```
+---
+layout: page
+title: Labs
+permalink: /labs/
+excludedFromNav:true
+---
+```
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT)
+Feel free to fork and contribute to the project, just create a pull request.
+
+Open sourced under [MIT License](LICENSE) 
+
